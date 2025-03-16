@@ -20,26 +20,21 @@
  
  export const Hook = () => {
  
- 
      // I create a 10 txn reserve for PREPARE_PAYMENT_SIMPLE
      etxn_reserve(10);
 
     //Check json Txn
     const txn = otxn_json() as Transaction
- 
-     // Counters to know how many address I have in the namespace and divide the final amount
-     let count = 0
-     let divide = 0
- 
+   
      // Declare the keywords for the Hook Params (It's needed to translate the string to hex string https://transia-rnd.github.io/xrpl-hex-visualizer/)
      
-     //NUM is 4E554D
-     const num_param = [0x4E, 0x55,0x4D]
+     //NU1 is 4E5531
+     const num1_param = [0x4E, 0x55,0x31]
      //ADD is 414444
      const add_param = [0x41,0x44,0x44]
 
-     //LET is 4C4554
-     const let_param = [0x4C, 0x45,0x54]
+     //NU2 is 4E5532
+     const num2_param = [0x4E, 0x55,0x32]
      //AMO is 414D4F
      const amo_param = [0x41,0x4D,0x4F]
   
@@ -48,40 +43,46 @@
      
  
      const account01 = state("00")
-     const account02 = state("01")
-     const account03 = state("02")
-     const account04 = state("03")
-     const account05 = state("04")
-     const account06 = state("05")
-     const account07 = state("06")
-     const account08 = state("07")
-     const account09 = state("08")
-     const account10 = state("09")
+     const amount01 = state("01")
+  
+     const account02 = state("02")
+     const amount02 = state("03")
 
-     const amount01 = state("A")
-     const amount02 = state("B")
-     const amount03 = state("C")
-     const amount04 = state("D")
-     const amount05 = state("E")
-     const amount06 = state("F")
-     const amount07 = state("G")
-     const amount08 = state("H")
-     const amount09 = state("I")
-     const amount10 = state("J")
+     const account03 = state("04")
+     const amount03 = state("05")
+
+     const account04 = state("06")
+     const amount04 = state("07")
+  
+     const account05 = state("08")
+     const amount05 = state("09")
+
+     const account06 = state("0A")
+     const amount06 = state("0B")
+
+     const account07 = state("0C")
+     const amount07 = state("0D")
+
+     const account08 = state("0E")
+     const amount08 = state("0F")
+
+     const account09 = state("10")
+     const amount09 = state("11")
+
+     const account10 = state("12")
+     const amount10 = state("13")
  
      // Check destination of the original txn
      const account_field = otxn_field(sfDestination);
-
   
      // Check hook account
      const hook_accid = hook_account()
 
-  
      // Check hook parameters
-     const num_buf = otxn_param(num_param)
+     const num1_buf = otxn_param(num1_param)
      const add_buf = otxn_param(add_param)
 
-     const let_buf = otxn_param(let_param)
+     const num2_buf = otxn_param(num2_param)
      const amo_buf = otxn_param(amo_param)
   
      const del_buf = otxn_param(del_param)
@@ -93,13 +94,13 @@
      // Check if hook_accid and account_field are the same
      const equal = JSON.stringify(hook_accid) == JSON.stringify(account_field) ? 1 : 0;
  
-     if (!equal && tt == ttINVOKE && add_buf.length == 20 && num_buf.length == 1 && let_buf.length == 1 && typeof del_buf.length === "undefined" && num_buf >= 0 && num_buf < 10)
+     if (!equal && tt == ttINVOKE && add_buf.length == 20 && (num1_buf.length == 1 || 2)  && (num2_buf.length == 1 || 2) && typeof del_buf.length === "undefined" && num1_buf >= 0 && num1_buf < 20)
      {
-         state_set(add_buf, num_buf)
-         state_set(amo_buf, let_buf)
+         state_set(add_buf, num1_buf)
+         state_set(amo_buf, num2_buf)
          accept("Forwarder: Address and corresponding amount added.", 1)
      }
-     if (!equal && tt == ttINVOKE && del_buf.length == 1 && typeof add_buf.length === "undefined" && typeof num_buf.length === "undefined" && typeof let_buf.length === "undefined" && typeof amo_buf.length === "undefined" && del_buf >= 0 && del_buf < 10)
+     if (!equal && tt == ttINVOKE && (del_buf.length == 1 || 2) && typeof add_buf.length === "undefined" && typeof num1_buf.length === "undefined" && typeof num2_buf.length === "undefined" && typeof amo_buf.length === "undefined" && del_buf >= 0 && del_buf < 20)
      {
          state_set(null, del_buf)
          accept("Forwarder: Address deleted.", 2)
