@@ -1,6 +1,6 @@
 
 ## Xahau Forwarder Amount Parameters System
-This is a example to demonstrate the use of a working hook in Xahau testnet. The hook is programmed in C. It is recommended for educational purposes only. The creator is not responsible for any problems it may cause.
+This is a example to demonstrate the use of a working hook in Xahau testnet. The hook is programmed in javascript. It is recommended for educational purposes only. The creator is not responsible for any problems it may cause.
 
 **Please use new accounts to test this hook and test everything beforehand on Testnet. I am not responsible for any losses. Create your own code if you are not sure.**
 
