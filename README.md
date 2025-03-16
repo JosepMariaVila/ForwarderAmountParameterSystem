@@ -32,38 +32,42 @@ The addresses must be converted to Account ID. To do this you can use the follow
 
 |identifier|address|
 |-----------|-------|
-|00|address1 translated to AccountID|
-|01|amount1 ...|
-|02|address2 translated to AccountID|
-|03|amount2 translated to AccountID|
-|04|address3 translated to AccountID|
-|05|amount3 translated to AccountID|
-|06|address4 translated to AccountID|
-|07|amount4 translated to AccountID|
-|08|address5 translated to AccountID|
-|09|amount5 translated to AccountID|
-|0A|address6 translated to AccountID|
-|0B|amount6 translated to AccountID|
-|0C|address7 translated to AccountID|
-|0D|amount7 translated to AccountID|
-|0E|address8 translated to AccountID|
-|0F|amount8 translated to AccountID|
-|10|address9 translated to AccountID|
-|11|amount9 translated to AccountID|
+|00|address01 translated to AccountID|
+|01|amount01 ...|
+|02|address02 translated to AccountID|
+|03|amount02 translated to AccountID|
+|04|address03 translated to AccountID|
+|05|amount03 translated to AccountID|
+|06|address04 translated to AccountID|
+|07|amount04 translated to AccountID|
+|08|address05 translated to AccountID|
+|09|amount05 translated to AccountID|
+|0A|address06 translated to AccountID|
+|0B|amount06 translated to AccountID|
+|0C|address07 translated to AccountID|
+|0D|amount07 translated to AccountID|
+|0E|address08 translated to AccountID|
+|0F|amount08 translated to AccountID|
+|10|address09 translated to AccountID|
+|11|amount09 translated to AccountID|
 |12|address10 translated to AccountID|
 |13|amount10 translated to AccountID|
 
-To add an account we must create an Invoke transaction from the hook account and add the following Hook parameters and values:
+To add an account and the desired amount we must create an Invoke transaction from the hook account and add the following Hook parameters and values:
 
+NU1 with a position we want between 00 to 13 
 ADD with the AccountID
-NUM with the position we want between 00 to 13 (uint8 format)
+NU2 with a position we want between 00 to 13
+AMO with the multiplier number we want for that acccount
 
 **Example:**
 
+- NU1: 00
 - ADD: D53F733E54B866B9FBDB85762071832B03A56C76
-- NUM: 00
+- NU2: 01
+- AMO: 01
 
-We need to change ADD and NUM keywords to hex. ADD = 414444 and NUM = 4E554D.
+We need to change ADD and NU1 and NU2 keywords to hex. ADD = 414444 and NU1 = 4E554D and NU2 = 
 Also, we need to translate address account rLSYATPWj9UECGBEeVpxwEN16CuEREK3uR to AccountID D53F733E54B866B9FBDB85762071832B03A56C76
 
 - 414444: D53F733E54B866B9FBDB85762071832B03A56C76
