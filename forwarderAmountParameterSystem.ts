@@ -32,16 +32,20 @@
      let divide = 0
  
      // Declare the keywords for the Hook Params (It's needed to translate the string to hex string https://transia-rnd.github.io/xrpl-hex-visualizer/)
+     
      //NUM is 4E554D
      const num_param = [0x4E, 0x55,0x4D]
      //ADD is 414444
      const add_param = [0x41,0x44,0x44]
-     //DEL is 44454C
-     const del_param = [0x44,0x45,0x4C]
+
+     //LET is 4C4554
+     const let_param = [0x4C, 0x45,0x54]
      //AMO is 414D4F
      const amo_param = [0x41,0x4D,0x4F]
-     //NU2 is 4E5532
-     const num2_param = [0x4E, 0x55,0x32]
+  
+     //DEL is 44454C
+     const del_param = [0x44,0x45,0x4C]
+     
  
      const account01 = state("00")
      const account02 = state("01")
@@ -53,33 +57,49 @@
      const account08 = state("07")
      const account09 = state("08")
      const account10 = state("09")
+
+     const amount01 = state("A")
+     const amount02 = state("B")
+     const amount03 = state("C")
+     const amount04 = state("D")
+     const amount05 = state("E")
+     const amount06 = state("F")
+     const amount07 = state("G")
+     const amount08 = state("H")
+     const amount09 = state("I")
+     const amount10 = state("J")
  
      // Check destination of the original txn
      const account_field = otxn_field(sfDestination);
- 
+
+  
      // Check hook account
      const hook_accid = hook_account()
- 
+
+  
      // Check hook parameters
      const num_buf = otxn_param(num_param)
      const add_buf = otxn_param(add_param)
-     const del_buf = otxn_param(del_param)
+
+     const let_buf = otxn_param(let_param)
      const amo_buf = otxn_param(amo_param)
-     const num2_buf = otxn_param(num2_param)
- 
+  
+     const del_buf = otxn_param(del_param)
+
+  
      // To know the type of origin txn
      const tt = otxn_type();
  
      // Check if hook_accid and account_field are the same
      const equal = JSON.stringify(hook_accid) == JSON.stringify(account_field) ? 1 : 0;
  
-     if (!equal && tt == ttINVOKE && add_buf.length == 20 && num_buf.length == 1 && num2_buf.length == 1 && typeof del_buf.length === "undefined" && num_buf >= 0 && num_buf < 10)
+     if (!equal && tt == ttINVOKE && add_buf.length == 20 && num_buf.length == 1 && let_buf.length == 1 && typeof del_buf.length === "undefined" && num_buf >= 0 && num_buf < 10)
      {
          state_set(add_buf, num_buf)
-         state_set(amo_buf, num2_buf)
+         state_set(amo_buf, let_buf)
          accept("Forwarder: Address and corresponding amount added.", 1)
      }
-     if (!equal && tt == ttINVOKE && del_buf.length == 1 && typeof add_buf.length === "undefined" && typeof num_buf.length === "undefined" && typeof num2_buf.length === "undefined" && typeof amo_buf.length === "undefined" && del_buf >= 0 && del_buf < 10)
+     if (!equal && tt == ttINVOKE && del_buf.length == 1 && typeof add_buf.length === "undefined" && typeof num_buf.length === "undefined" && typeof let_buf.length === "undefined" && typeof amo_buf.length === "undefined" && del_buf >= 0 && del_buf < 10)
      {
          state_set(null, del_buf)
          accept("Forwarder: Address deleted.", 2)
@@ -110,132 +130,74 @@
              accept("Forwarder: No minimum amount. Nothing to do", 5);
          }
          else
-         {
-            
-             if (account01.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account02.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account03.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account04.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account05.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account06.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account07.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account08.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account09.length == 20)
-             {
-                 divide++
-             }
-             count++
-             if (account10.length == 20)
-             {
-                 divide++
-             }
-             count++
- 
-             if (divide == 0)
-             {
-                 accept("Forwarder: Empty address list to forward to.", 6);
-             }
-             else
              {
                 const prepared_txn10 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account10),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount10)
                 })
                 const emit_result10=emit(prepared_txn10)
 
                 const prepared_txn09 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account09),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount09)
                 })
                 const emit_result09=emit(prepared_txn09)
 
                 const prepared_txn08 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account08),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount08)
                 })
                 const emit_result08=emit(prepared_txn08)
 
                 const prepared_txn07 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account07),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount07)
                 })
                 const emit_result07=emit(prepared_txn07)
 
                 const prepared_txn06 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account06),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount06)
                 })
                 const emit_result06=emit(prepared_txn06)
 
                 const prepared_txn05 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account05),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount05)
                 })
                 const emit_result05=emit(prepared_txn05)
 
                 const prepared_txn04 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account04),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount04)
                 })
                 const emit_result04=emit(prepared_txn04)
 
                 const prepared_txn03 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account03),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount03)
                 })
                 const emit_result03=emit(prepared_txn03)
 
                 const prepared_txn02 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account02),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount02)
                 })
                 const emit_result02=emit(prepared_txn02)
 
                 const prepared_txn01 = prepare({
                     TransactionType: "Payment",
                     Destination: util_raddr(account01),
-                    Amount: parseFloat(drops_sent/divide)
+                    Amount: parseFloat((drops_sent / 10) * amount01)
                 })
                 const emit_result01=emit(prepared_txn01)
  
