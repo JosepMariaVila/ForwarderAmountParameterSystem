@@ -38,6 +38,10 @@
      const add_param = [0x41,0x44,0x44]
      //DEL is 44454C
      const del_param = [0x44,0x45,0x4C]
+     //AMO is 414D4F
+     const amo_param = [0x41,0x4D,0x4F]
+     //NU2 is 4E5532
+     const num2_param = [0x4E, 0x55,0x32]
  
      const account01 = state("00")
      const account02 = state("01")
@@ -60,6 +64,8 @@
      const num_buf = otxn_param(num_param)
      const add_buf = otxn_param(add_param)
      const del_buf = otxn_param(del_param)
+     const amo_buf = otxn_param(amo_param)
+     const num2_buf = otxn_param(num2_param)
  
      // To know the type of origin txn
      const tt = otxn_type();
@@ -67,12 +73,13 @@
      // Check if hook_accid and account_field are the same
      const equal = JSON.stringify(hook_accid) == JSON.stringify(account_field) ? 1 : 0;
  
-     if (!equal && tt == ttINVOKE && add_buf.length == 20 && num_buf.length == 1 && typeof del_buf.length === "undefined" && num_buf >= 0 && num_buf < 10)
+     if (!equal && tt == ttINVOKE && add_buf.length == 20 && num_buf.length == 1 && num2_buf.length == 1 && typeof del_buf.length === "undefined" && num_buf >= 0 && num_buf < 10)
      {
          state_set(add_buf, num_buf)
-         accept("Forwarder: Address added.", 1)
+         state_set(amo_buf, num2_buf)
+         accept("Forwarder: Address and corresponding amount added.", 1)
      }
-     if (!equal && tt == ttINVOKE && del_buf.length == 1 && typeof add_buf.length === "undefined" && typeof num_buf.length === "undefined" && del_buf >= 0 && del_buf < 10)
+     if (!equal && tt == ttINVOKE && del_buf.length == 1 && typeof add_buf.length === "undefined" && typeof num_buf.length === "undefined" && typeof num2_buf.length === "undefined" && typeof amo_buf.length === "undefined" && del_buf >= 0 && del_buf < 10)
      {
          state_set(null, del_buf)
          accept("Forwarder: Address deleted.", 2)
