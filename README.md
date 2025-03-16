@@ -4,9 +4,9 @@ This is a example to demonstrate the use of a working hook in Xahau testnet. The
 
 **Please use new accounts to test this hook and test everything beforehand on Testnet. I am not responsible for any losses. Create your own code if you are not sure.**
 
-## What does the Forwarder Hook do?
+## What does the Forwarder Amount Parameters System Hook do?
 
-The hook is installed on an account (salary distributor). Once installed, every time the account receives a payment (from the boss) through a Payment or URITokenBuy transaction type, it will be distributed among the accounts stored (employees) in the account namespace. If there are no accounts in the namespace, it will do nothing.
+The hook is installed on an account (salary distributor). Once installed, every time the account receives a payment (from the boss) through a Payment or URITokenBuy transaction type, it will be distributed in the corresponding amounts stored in the namespaces among the accounts stored (employees) also in the namespaces. If there are no accounts in the namespace, it will do nothing.
 
 ## Attention
 
@@ -20,9 +20,7 @@ https://youtu.be/JF_xMS-4WCE
 
 ## How to add addresses?
 
-The hook allows up to 20 addresses to which the amounts received can be distributed in equal parts. They will be registered with an identifier from 00 to 13 (in uint8 format, so 20 addressess), tool to check the numbers:
-
-- https://transia-rnd.github.io/xrpl-hex-visualizer/
+The hook allows up to 10 addresses to which the amounts received can be distributed in desired different amounts.
 
 The addresses must be converted to Account ID. To do this you can use the following tool:
 
@@ -67,11 +65,13 @@ AMO with the multiplier number we want for that acccount
 - NU2: 01
 - AMO: 01
 
-We need to change ADD and NU1 and NU2 keywords to hex. ADD = 414444 and NU1 = 4E554D and NU2 = 
+We need to change NU1, ADD, NU2 and AMO to hex. NU1 = 4E5531, ADD = 414444, NU2= 4E5532 and AMO = 414D4F
 Also, we need to translate address account rLSYATPWj9UECGBEeVpxwEN16CuEREK3uR to AccountID D53F733E54B866B9FBDB85762071832B03A56C76
 
+- 4E5531: 00
 - 414444: D53F733E54B866B9FBDB85762071832B03A56C76
-- 4E554D: 00
+- 4E5532: 01
+- 414D4F: 01 (?)
 
 ## How to delete addresses?
 
@@ -79,11 +79,6 @@ To delete you have to create an Invoke transaction from the hook account and use
 
 DEL and the position we want to delete between 00 to 13 (uint8 format)
 
-## Video Tutorial Resources
-
-Follow this video tutorial and use the following links to learn how to use this hook on Xahau Testnet using the Hooks Builder: 
-
-https://youtu.be/JF_xMS-4WCE
 
 Links to follow the tutorial:
 
