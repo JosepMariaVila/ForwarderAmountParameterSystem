@@ -270,13 +270,13 @@ https://xahau-jshooks-testnet.xrplwin.com/account/rU6Pgd7NhR12uthsVQ7LJFXXicmL2Y
 
 ## Links
 
-](https://jshooks-builder.xahau.network/develop)
+https://jshooks-builder.xahau.network/develop
 
 https://hooks.services/tools/raddress-to-accountid
 
 https://transia-rnd.github.io/xrpl-hex-visualizer/
 
-https://xahau-testnet.xrplwin.com/
+https://xahau-jshooks-testnet.xrplwin.com/
 
 ## Credit
 
