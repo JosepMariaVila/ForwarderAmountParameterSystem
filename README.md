@@ -29,6 +29,8 @@ Numbers corresponding to the desired number of parts have to be in Hex format as
 
 You can modifiy the amount of parts sent to each beneficiary modifiying the hook parameter AMO performing an invoke transaction wit the desired number-parts: 
 
+If the amount to send to a beneficiary is 0 parts out of 10, set in the invoke transaction the parameter AMO to 00.
+
 If the amount to send to a beneficiary is 1 part out of 10, set in the invoke transaction the parameter AMO to 01.
 
 If the amount to send to a beneficiary are 2 parts out of 10, set in the invoke transaction the parameter AMO to 02.
