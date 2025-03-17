@@ -1,3 +1,4 @@
+![forwarder hoook amount parameters system](https://github.com/user-attachments/assets/8be30588-ab29-4cbe-a991-086227ffd404)
 
 ## Forwarder Hook Amount Parameter System
 This is a example to demonstrate the use of a working hook in Xahau testnet. The hook is programmed in javascript. It is recommended for educational purposes only. The creator is not responsible for any problems it may cause.
@@ -42,7 +43,7 @@ If the amount to send to a beneficiary are 9 parts out of 10, set in the invoke 
 
 If the amount to send to a beneficiary are 10 parts out of 10, set in the invoke transaction the parameter AMO to 0A.
 
-**Monday-Friday payments example:** 
+**EXAMPLE: Monday-Friday payments** 
 
 **On Monday the hook receives 100 XAH and it has set in the parameters the following distribution:**
 
@@ -143,7 +144,7 @@ Parameter 4: AMO
 Value: the desired amount-part this account has to receive, it can be any of the following from 1 to 10 in Hex format: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
 
-**Store addresses and amounts in state by parameters examples:**
+**EXAMPLES: Store addresses and amounts in state by parameters**
 
 Beneficiary 1:
 - NU1: 00
@@ -221,7 +222,7 @@ You can send an invoke transaction with a different amount-part as value and it 
 
 To delete a hook state you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as the value to be deleted (1 invoke transation for each element to delte):
 
-**Delete states examples:**
+**EXAMPLES: Delete states**
 
 To delete Beneficiary 1 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 00.
@@ -263,7 +264,11 @@ To delete Beneficiary 10 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 12.
 1 invoke transaction with parameter: DEL, pointing to position: 13.
 
-Links:
+## Hook example on the JS Hooks Xahau network
+
+https://xahau-jshooks-testnet.xrplwin.com/account/rU6Pgd7NhR12uthsVQ7LJFXXicmL2Y6YPE
+
+## Links
 
 ](https://jshooks-builder.xahau.network/develop)
 
