@@ -247,7 +247,7 @@ Beneficiary 9:
 - NU1: 10
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 11
-- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+- AMO: 02 (the desired amount of parts to send, in this case 2 parts out of 10)
   
 <br>
 
@@ -255,7 +255,7 @@ Beneficiary 10:
 - NU1: 12
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 13
-- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+- AMO: 00 (the desired amount of parts to send, in this case 0 parts)
   
 <br>
 
