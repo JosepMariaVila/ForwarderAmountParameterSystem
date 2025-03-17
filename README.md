@@ -45,28 +45,50 @@ If the amount to send to a beneficiary are 10 parts out of 10, set in the invoke
 (Numbers in Hex from 1 to 10: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.)
 
 Example: 
+
 On Monday the hook receives 100 XAH and it has set in the parameters the following distribution:
+
 Account 1: 3 parts. So 30 XAH. The hook has the parameter AMO set to 03 regarding Account 1.
+
 Account 2: 2 parts. So 20 XAH. The hook has the parameter AMO set to 02 regarding Account 2.
+
 Account 3: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 3.
+
 Account 4: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 4.
+
 Account 5: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 5.
+
 Account 6: 4 parts. So 40 XAH. The hook has the parameter AMO set to 04 regarding Account 6.
+
 Account 7: 1 part. So 10 XAH. The hook has the parameter AMO set to 01 regarding Account 7.
+
 Account 8: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 8.
+
 Account 9: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 9.
+
 Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 10.
 
+
 On Fridat we will receive another payment, 1000 XAH, but we want to distribute it differently, so we perform an invoke transaction and set the parameters as desired:
+
 Account 1: 5 parts. So 500 XAH. The hook has the parameter AMO set to 05 regarding Account 1.
+
 Account 2: 1 parts. So 100 XAH. The hook has the parameter AMO set to 01 regarding Account 2.
+
 Account 3: 1 parts. So 100 XAH. The hook has the parameter AMO set to 01 regarding Account 3.
+
 Account 4: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 4.
+
 Account 5: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 5.
+
 Account 6: 1 parts. So 100 XAH. The hook has the parameter AMO set to 01 regarding Account 6.
+
 Account 7: 1 part. So 100 XAH. The hook has the parameter AMO set to 01 regarding Account 7.
+
 Account 8: 1 parts. So 1000 XAH. The hook has the parameter AMO set to 01 regarding Account 8.
+
 Account 9: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 9.
+
 Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 10.
 
 
