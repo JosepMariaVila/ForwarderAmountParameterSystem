@@ -175,7 +175,7 @@ Value: the desired amount-part this account has to receive, it can be any of the
 
 Beneficiary 1:
 - NU1: 00
-- ADD: D53F733E54B866B9FBDB85762071832B03A56C76 (the desired beneficiary raddres converted to AccountID)
+- ADD: D53F733E54B866B9FBDB85762071832B03A56C76 (desired beneficiary raddres converted to AccountID)
 - NU2: 01
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
 
