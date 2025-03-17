@@ -1,10 +1,10 @@
 
-## Forwarder Hook Amount Parameters System
+## Forwarder Hook Amount Parameter System
 This is a example to demonstrate the use of a working hook in Xahau testnet. The hook is programmed in javascript. It is recommended for educational purposes only. The creator is not responsible for any problems it may cause.
 
 **Please use new accounts to test this hook and test everything beforehand on Testnet. I am not responsible for any losses. Create your own code if you are not sure.**
 
-## What does the Forwarder Amount Parameters System Hook do?
+## What does the Forwarder Amount Parameter System Hook do?
 
 The hook is installed on an account (salary distributor). Once installed, every time the account receives a payment through a Payment or URITokenBuy transaction type, it will be distributed to the corresponding accounts and amounts both stored in the namespaces.
 
