@@ -165,7 +165,7 @@ Value: a position between 00 to 13 (00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A, 
 
 Parameter 4: **AMO**
 
-Value: the desired amount-part this account has to receive, it can be any of the following from 1 to 10 in Hex format: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
+Value: the desired amount-part this account has to receive, it can be any of the following from 0 to 10 in Hex format: 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
 <br>
 
