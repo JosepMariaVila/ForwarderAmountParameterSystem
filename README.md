@@ -25,7 +25,7 @@ Addresses must be converted to Account ID. To do this you can use the following 
 
 The total amount the hook receives is divided by 10, so we have 10 parts which can be distributed as set in the AMO parameter to the 10 different beneficiary accounts. 
 
-Numbers corresponding to the desired number of parts have to be in Hex format as follows, from 1 to 10 (it can be 0 if we don't want to send any amount to certain account): 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
+Numbers corresponding to the desired number of parts have to be in Hex format as follows, from 0 to 10 (it can be 0 if we don't want to send any amount to certain account): 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
 You can modifiy the amount of parts sent to each beneficiary modifiying the hook parameter AMO performing an invoke transaction wit the desired number-parts: 
 
