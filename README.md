@@ -141,17 +141,25 @@ Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regardin
 
 To add an account in the hook we must create an Invoke transaction for each beneficiary from the hook account and add the following 4 Hook parameters and the corresponding values:
 
+<br>
+
 Parameter 1: **NU1** 
 
 Value: a position between 00 to 13 (00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A, 0B, 0C, 0D, 0E, 0F, 10, 11, 12 or 13, ususally take numbers in order as needed). 
+
+<br>
 
 Parameter 2: **ADD** 
 
 Value: the desired AccountID
 
+<br>
+
 Parameter 3: **NU2**
 
 Value: a position between 00 to 13 (00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A, 0B, 0C, 0D, 0E, 0F, 10, 11, 12 or 13, chose a number not already in use, go in order). 
+
+<br>
 
 Parameter 4: **AMO**
 
