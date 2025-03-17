@@ -69,6 +69,7 @@ Account 9: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding
 
 Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 10.
 
+<br>
 
 **On Friday we will receive another payment, 1000 XAH, but we want to distribute it differently, so we perform an invoke transaction and set the parameters as desired:**
 
@@ -92,6 +93,7 @@ Account 9: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding
 
 Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 10.
 
+<br>
 
 **Visual representation of the namespace or address book:**
 
@@ -127,6 +129,8 @@ Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regardin
 |12|address10 translated to AccountID|
 |13|amount10 a number-part from 1 to 10 in hex|
 
+<br>
+
 To add an account in the hook we must create an Invoke transaction for each beneficiary from the hook account and add the following 4 Hook parameters and the corresponding values:
 
 Parameter 1: NU1 
@@ -145,9 +149,10 @@ Parameter 4: AMO
 
 Value: the desired amount-part this account has to receive, it can be any of the following from 1 to 10 in Hex format: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
+<br>
 
 **EXAMPLES: Store addresses and amounts in state by parameters**
-
+<br>
 Beneficiary 1:
 - NU1: 00
 - ADD: D53F733E54B866B9FBDB85762071832B03A56C76 (the desired beneficiary raddres converted to AccountID)
@@ -159,25 +164,25 @@ Note that it is needed to convert NU1, ADD, NU2 and AMO to hex. NU1 = 4E5531, AD
 - 414444: D53F733E54B866B9FBDB85762071832B03A56C76
 - 4E5532: 01
 - 414D4F: 01
-
+<br>
 Beneficiary 2:
 - NU1: 02
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 03
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Beneficiary 3:
 - NU1: 04
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 05
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Beneficiary 4:
 - NU1: 06
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 07
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Beneficiary 5:
 - NU1: 08
 - ADD: (the desired beneficiary raddres converted to AccountID)
@@ -189,33 +194,33 @@ Beneficiary 6:
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 0B
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Beneficiary 7:
 - NU1: 0C
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 0D
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Beneficiary 8:
 - NU1: 0E
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 0F
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Beneficiary 9:
 - NU1: 10
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 11
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Beneficiary 10:
 - NU1: 12
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 13
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
-
+<br>
 Have in mind that the total amount of parts of all accounts combined always has to be 10.
-
+<br>
 ## How to modify amounts-parts?
 
 You can send an invoke transaction with a different amount-part as value and it will overwrite the current corresponding hook state. So no need to first delete the state and then store the new data in it, you can just send an invoke transaction wit the new desired amount and it will overwrite it.
@@ -223,49 +228,49 @@ You can send an invoke transaction with a different amount-part as value and it 
 ## How to delete addresses and/or amounts-parts?
 
 To delete a hook state you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as the value to be deleted (1 invoke transation for each element to delte):
-
+<br>
 **EXAMPLES: Delete states**
-
+<br>
 To delete Beneficiary 1 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 00.
 1 invoke transaction with parameter: DEL, pointing to position: 01.
-
+<br>
 To delete Beneficiary 2 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 02.
 1 invoke transaction with parameter: DEL, pointing to position: 03.
-
+<br>
 To delete Beneficiary 3 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 04.
 1 invoke transaction with parameter: DEL, pointing to position: 05.
-
+<br>
 To delete Beneficiary 4 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 06.
 1 invoke transaction with parameter: DEL, pointing to position: 07.
-
+<br>
 To delete Beneficiary 5 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 08.
 1 invoke transaction with parameter: DEL, pointing to position: 09.
-
+<br>
 To delete Beneficiary 6 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 0A.
 1 invoke transaction with parameter: DEL, pointing to position: 0B.
-
+<br>
 To delete Beneficiary 7 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 0C.
 1 invoke transaction with parameter: DEL, pointing to position: 0D.
-
+<br>
 To delete Beneficiary 8 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 0E.
 1 invoke transaction with parameter: DEL, pointing to position: 0F.
-
+<br>
 To delete Beneficiary 9 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 10.
 1 invoke transaction with parameter: DEL, pointing to position: 11.
-
+<br>
 To delete Beneficiary 10 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 12.
 1 invoke transaction with parameter: DEL, pointing to position: 13.
-
+<br>
 ## Hook example on the JS Hooks Xahau network
 
 https://xahau-jshooks-testnet.xrplwin.com/account/rU6Pgd7NhR12uthsVQ7LJFXXicmL2Y6YPE
