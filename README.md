@@ -124,12 +124,24 @@ Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regardin
 |12|address10 translated to AccountID|
 |13|amount10 a number-part from 1 to 10 in hex|
 
-To add an account in the hook we must create an Invoke transaction from the hook account and add the following Hook parameters and values:
+To add an account in the hook we must create an Invoke transaction for each beneficiary from the hook account and add the following 4 Hook parameters and the corresponding values:
 
-NU1 with a position we want between 00 to 13 
-ADD with the AccountID
-NU2 with a position we want between 00 to 13
-AMO with the multiplier number we want for that acccount
+Parameter 1: NU1 
+
+Value: a position between 00 to 13 (00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A, 0B, 0C, 0D, 0E, 0F, 10, 11, 12 or 13, ususally take numbers in order as needed). 
+
+Parameter 2: ADD 
+
+Value: the desired AccountID
+
+Parameter 3: NU2
+
+Value: a position between 00 to 13 (00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A, 0B, 0C, 0D, 0E, 0F, 10, 11, 12 or 13, chose a number not already in use, go in order). 
+
+Parameter 4: AMO
+
+Value: the desired amount-part this account has to receive, it can be any of the following from 1 to 10 in Hex format: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
+
 
 **Examples:**
 
@@ -198,6 +210,8 @@ Beneficiary 10:
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 13
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Have in mind that the total amount of parts of all accounts combined always has to be 10.
 
 ## How to delete addresses and amounts-parts?
 
