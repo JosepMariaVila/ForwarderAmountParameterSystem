@@ -23,14 +23,23 @@ The addresses must be converted to Account ID. To do this you can use the follow
 The total amount the hook receives is divided by 10, so we have 10 parts which can be distributed as desired to the 10 different beneficiary accounts. You can modifiy the amount of parts sent to each beneficiary modifiying the hook parameters performing an invoke transaction as follows: 
 
 If the amount to send to a beneficiary is 1 part out of 10, set in the invoke transaction the parameter AMO to 01.
+
 If the amount to send to a beneficiary are 2 parts out of 10, set in the invoke transaction the parameter AMO to 02.
+
 If the amount to send to a beneficiary are 3 parts out of 10, set in the invoke transaction the parameter AMO to 03.
+
 If the amount to send to a beneficiary are 4 parts out of 10, set in the invoke transaction the parameter AMO to 04.
+
 If the amount to send to a beneficiary are 5 parts out of 10, set in the invoke transaction the parameter AMO to 05.
+
 If the amount to send to a beneficiary are 6 parts out of 10, set in the invoke transaction the parameter AMO to 06.
+
 If the amount to send to a beneficiary are 7 parts out of 10, set in the invoke transaction the parameter AMO to 07.
+
 If the amount to send to a beneficiary are 8 parts out of 10, set in the invoke transaction the parameter AMO to 08.
+
 If the amount to send to a beneficiary are 9 parts out of 10, set in the invoke transaction the parameter AMO to 09.
+
 If the amount to send to a beneficiary are 10 parts out of 10, set in the invoke transaction the parameter AMO to 0A.
 
 (Numbers in Hex from 1 to 10: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.)
