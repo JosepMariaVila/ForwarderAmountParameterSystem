@@ -5,9 +5,13 @@ This is a example to demonstrate the use of a working hook in Xahau testnet. The
 
 **Please use new accounts to test this hook and test everything beforehand on Testnet. I am not responsible for any losses. Create your own code if you are not sure.**
 
+<br>
+
 ## What does the Forwarder Amount Parameter System Hook do?
 
 The hook is installed on an account (salary distributor). Once installed, every time the account receives a payment through a Payment or URITokenBuy transaction type, it will be distributed to the corresponding accounts and amounts both stored in the namespaces.
+
+<br>
 
 ## How to add addresses and amounts-parts?
 
