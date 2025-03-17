@@ -280,61 +280,81 @@ To delete a hook state you have to create an Invoke transaction from the hook ac
 <br>
 
 To delete Beneficiary 1 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 00.
-1 invoke transaction with parameter: DEL, pointing to position: 01.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 00.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 01.
 
 <br>
 
 To delete Beneficiary 2 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 02.
-1 invoke transaction with parameter: DEL, pointing to position: 03.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 02.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 03.
 
 <br>
 
 To delete Beneficiary 3 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 04.
-1 invoke transaction with parameter: DEL, pointing to position: 05.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 04.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 05.
 
 <br>
 
 To delete Beneficiary 4 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 06.
-1 invoke transaction with parameter: DEL, pointing to position: 07.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 06.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 07.
 
 <br>
 
 To delete Beneficiary 5 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 08.
-1 invoke transaction with parameter: DEL, pointing to position: 09.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 08.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 09.
 
 <br>
 
 To delete Beneficiary 6 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 0A.
-1 invoke transaction with parameter: DEL, pointing to position: 0B.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 0A.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 0B.
 
 <br>
 
 To delete Beneficiary 7 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 0C.
-1 invoke transaction with parameter: DEL, pointing to position: 0D.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 0C.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 0D.
 <br>
 
 To delete Beneficiary 8 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 0E.
-1 invoke transaction with parameter: DEL, pointing to position: 0F.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 0E.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 0F.
 
 <br>
 
 To delete Beneficiary 9 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 10.
-1 invoke transaction with parameter: DEL, pointing to position: 11.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 10.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 11.
 
 <br>
 
 To delete Beneficiary 10 adresss and amount-part:
-1 invoke transaction with parameter: DEL, pointing to position: 12.
-1 invoke transaction with parameter: DEL, pointing to position: 13.
+
+To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 12.
+
+To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 13.
 
 <br>
 
