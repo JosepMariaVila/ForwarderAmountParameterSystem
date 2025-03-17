@@ -72,10 +72,10 @@ Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regardin
 |-----------|-------|
 |00|address01 translated to AccountID|
 |01|amount01: a number-part from 1 to 10 in hex| 
-
+|-----------|-------|
 |02|address02 translated to AccountID|
 |03|amount02 a number-part from 1 to 10 in hex|
-
+|-----------|-------|
 |04|address03 translated to AccountID|
 |05|amount03 a number-part from 1 to 10 in hex|
 
