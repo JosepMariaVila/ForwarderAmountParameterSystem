@@ -1,22 +1,22 @@
 
-## Xahau Forwarder Amount Parameters System
+## Forwarder Hook Amount Parameters System
 This is a example to demonstrate the use of a working hook in Xahau testnet. The hook is programmed in javascript. It is recommended for educational purposes only. The creator is not responsible for any problems it may cause.
 
 **Please use new accounts to test this hook and test everything beforehand on Testnet. I am not responsible for any losses. Create your own code if you are not sure.**
 
 ## What does the Forwarder Amount Parameters System Hook do?
 
-The hook is installed on an account (salary distributor). Once installed, every time the account receives a payment (from the boss) through a Payment or URITokenBuy transaction type, it will be distributed in the corresponding amounts stored in the namespaces among the accounts stored (employees) also in the namespaces. If there are no accounts in the namespace, it will do nothing.
+The hook is installed on an account (salary distributor). Once installed, every time the account receives a payment through a Payment or URITokenBuy transaction type, it will be distributed to the corresponding amounts stored in the namespaces among the accounts stored (employees, beneficiaries) also in the namespaces. If there are no accounts in the namespace, it will do nothing.
 
 ## How to add addresses and amounts-parts?
 
-The hook allows up to 10 addresses to which the amounts received can be distributed in the different desired amounts.
+The hook allows up to 10 addresses to which the amounts received can be distributed in the different desired amounts-parts.
 
-The addresses must be converted to Account ID. To do this you can use the following tool:
+Addresses must be converted to Account ID. To do this you can use the following tool:
 
 - https://hooks.services/tools/raddress-to-accountid
 
-The total amount the hook receives is divided by 10, so we have 10 parts which can be distributed as desired to the 10 different beneficiary accounts. 
+The total amount the hook receives is divided by 10, so we have 10 parts which can be distributed as set in the AMO parameter to the 10 different beneficiary accounts. 
 
 Numbers corresponding to the desired number of parts have to be in Hex format as follows, from 1 to 10: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
@@ -41,8 +41,6 @@ If the amount to send to a beneficiary are 8 parts out of 10, set in the invoke 
 If the amount to send to a beneficiary are 9 parts out of 10, set in the invoke transaction the parameter AMO to 09.
 
 If the amount to send to a beneficiary are 10 parts out of 10, set in the invoke transaction the parameter AMO to 0A.
-
-(Numbers in Hex from 1 to 10: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.)
 
 **Example: 
 
