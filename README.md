@@ -143,7 +143,7 @@ Parameter 4: AMO
 Value: the desired amount-part this account has to receive, it can be any of the following from 1 to 10 in Hex format: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
 
-**Examples:**
+**Store addresses and amounts in state by parameters examples:**
 
 Beneficiary 1:
 - NU1: 00
@@ -213,9 +213,16 @@ Beneficiary 10:
 
 Have in mind that the total amount of parts of all accounts combined always has to be 10.
 
-## How to delete addresses and amounts-parts?
+## How to modify amounts-parts?
 
-To delete you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as value (1 invoke transation for each element to delte):
+You can send an invoke transaction with a different amount-part as value and it will overwrite the current corresponding hook state. So no need to first delete the state and then store the new data in it, you can just send an invoke transaction wit the new desired amount and it will overwrite it.
+
+## How to delete addresses and/or amounts-parts?
+
+To delete a hook state you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as the value to be deleted (1 invoke transation for each element to delte):
+
+**Delete states examples:**
+
 To delete Beneficiary 1 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 00.
 1 invoke transaction with parameter: DEL, pointing to position: 01.
