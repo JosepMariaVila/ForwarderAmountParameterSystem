@@ -16,7 +16,7 @@
  
  export const Hook = () => {
  
-     // I create a 10 txn reserve for PREPARE_PAYMENT_SIMPLE
+     // We create a 10 txn reserve for PREPARE_PAYMENT_SIMPLE
      etxn_reserve(10);
 
     //Check json Txn
@@ -108,7 +108,7 @@
      else
      {
  
-         // fetch the sent Amount
+         // Fetch the sent Amount
          // Amounts can be 384 bits or 64 bits. If the Amount is an XAH value it will be 64 bits.
          const  amount_buffer = otxn_field(sfAmount)
          const drops_to_send = 0; // this will be the default
