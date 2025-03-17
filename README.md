@@ -166,63 +166,85 @@ Note that it is needed to convert NU1, ADD, NU2 and AMO to hex. NU1 = 4E5531, AD
 - 414444: D53F733E54B866B9FBDB85762071832B03A56C76
 - 4E5532: 01
 - 414D4F: 01
+  
 <br>
+
 Beneficiary 2:
 - NU1: 02
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 03
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Beneficiary 3:
 - NU1: 04
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 05
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Beneficiary 4:
 - NU1: 06
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 07
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Beneficiary 5:
 - NU1: 08
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 09
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
 
+<br>
+
 Beneficiary 6:
 - NU1: 0A
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 0B
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Beneficiary 7:
 - NU1: 0C
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 0D
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Beneficiary 8:
 - NU1: 0E
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 0F
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Beneficiary 9:
 - NU1: 10
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 11
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Beneficiary 10:
 - NU1: 12
 - ADD: (the desired beneficiary raddres converted to AccountID)
 - NU2: 13
 - AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+  
 <br>
+
 Have in mind that the total amount of parts of all accounts combined always has to be 10.
+
 <br>
+
 ## How to modify amounts-parts?
 
 You can send an invoke transaction with a different amount-part as value and it will overwrite the current corresponding hook state. So no need to first delete the state and then store the new data in it, you can just send an invoke transaction wit the new desired amount and it will overwrite it.
