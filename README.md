@@ -152,7 +152,9 @@ Value: the desired amount-part this account has to receive, it can be any of the
 <br>
 
 **EXAMPLES: Store addresses and amounts in state by parameters**
+
 <br>
+
 Beneficiary 1:
 - NU1: 00
 - ADD: D53F733E54B866B9FBDB85762071832B03A56C76 (the desired beneficiary raddres converted to AccountID)
