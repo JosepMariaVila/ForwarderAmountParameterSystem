@@ -340,6 +340,8 @@ To delete Beneficiary 10 adresss and amount-part:
 
 https://xahau-jshooks-testnet.xrplwin.com/account/rU6Pgd7NhR12uthsVQ7LJFXXicmL2Y6YPE
 
+<br>
+
 ## Links
 
 https://jshooks-builder.xahau.network/develop
@@ -349,6 +351,8 @@ https://hooks.services/tools/raddress-to-accountid
 https://transia-rnd.github.io/xrpl-hex-visualizer/
 
 https://xahau-jshooks-testnet.xrplwin.com/
+
+<br>
 
 ## Credit
 
