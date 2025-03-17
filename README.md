@@ -366,15 +366,13 @@ https://xahau-jshooks-testnet.xrplwin.com/account/rU6Pgd7NhR12uthsVQ7LJFXXicmL2Y
 
 ## Links
 
-https://jshooks-builder.xahau.network/develop
+JSHooks Builder: https://jshooks-builder.xahau.network/develop
 
 raddress to AccountID: https://hooks.services/tools/raddress-to-accountid
 
 ASCII to HEX: https://hooks.services/tools/ascii-to-hex
 
-https://transia-rnd.github.io/xrpl-hex-visualizer/
-
-https://xahau-jshooks-testnet.xrplwin.com/
+JSHooks testnet explorer: https://xahau-jshooks-testnet.xrplwin.com/
 
 <br>
 
