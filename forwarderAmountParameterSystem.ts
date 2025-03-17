@@ -1,19 +1,14 @@
 
-/**
+/*
  * This hook resend the desired amount from a payment received or a URI buy to the destinations saved in the namespace of the hooks account.
  * The hook accepts 10 destinations and it can distribute 10 parts to the desired accounts.
  * You can add destinations to the namespaces
- * Hook Parameters to Add destinations using Invoke
+ * Hook Parameters to Add destinations and Amounts-parts using Invoke:
  * ADD: Xahau Address transformed  from rAddress To Account ID. You can use https://hooks.services/tools/raddress-to-accountid or https://transia-rnd.github.io/xrpl-hex-visualizer/ . To check if you are doing it right, address: rBnGX5KRERL2vMtZU2hDpF4osbhvichmvn will be translated to 6E7FE2948037180F3646CC248FAF2BCACD59893C
  * NU1: The number to identify the address and be able to delete it (from 00 to 13)
- * NU2: The number to identify the number amount and be able to send the desired proportion and also to delete it (from 00 to 13)
-
+ * NU2: The number to identify the amount-parts and be able to send the desired proportion; also to delete it (from 00 to 13)
  * Hook Parameters to delete destinations using Invoke
  * DEL: Number (from 00 to 13)
-
- You can check the status of your namespace visiting https://xahau-jshooks-testnet.xrplwin.com/ checking your hook account
-
- * This is a small example, probably it's not the best way to code this Hook. Please, verify everything before using it.
  */
 
  import {sfAccount, sfDestination, sfAmount} from "sfcodes"
@@ -41,8 +36,8 @@
   
      //DEL is 44454C
      const del_param = [0x44,0x45,0x4C]
-     
- 
+
+  
      const account01 = state("00")
      const amount01 = state("01")
   
