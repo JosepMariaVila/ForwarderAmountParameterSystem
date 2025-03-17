@@ -42,9 +42,9 @@ If the amount to send to a beneficiary are 9 parts out of 10, set in the invoke 
 
 If the amount to send to a beneficiary are 10 parts out of 10, set in the invoke transaction the parameter AMO to 0A.
 
-**Example: 
+**Example:** 
 
-**On Monday the hook receives 100 XAH and it has set in the parameters the following distribution:
+**On Monday the hook receives 100 XAH and it has set in the parameters the following distribution:**
 
 Account 1: 3 parts. So 30 XAH. The hook has the parameter AMO set to 03 regarding Acc]ount 1.
 
@@ -67,7 +67,7 @@ Account 9: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding
 Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regarding Account 10.
 
 
-**On Fridat we will receive another payment, 1000 XAH, but we want to distribute it differently, so we perform an invoke transaction and set the parameters as desired:
+**On Fridat we will receive another payment, 1000 XAH, but we want to distribute it differently, so we perform an invoke transaction and set the parameters as desired:**
 
 Account 1: 5 parts. So 500 XAH. The hook has the parameter AMO set to 05 regarding Account 1.
 
