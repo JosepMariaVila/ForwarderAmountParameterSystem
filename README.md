@@ -67,8 +67,7 @@ Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regardin
 
 **Visual representation of the namespace or address book:**
 
-|identifier|address|
-|identifier|amount-part|
+|identifier|address or amount-part|
 |----------|----------|
 |00|address01 translated to AccountID|
 |01|amount01: a number-part from 1 to 10 in hex| 
