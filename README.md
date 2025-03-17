@@ -265,6 +265,8 @@ Have in mind that the total amount of parts of all accounts combined always has 
 
 You can send an invoke transaction with a different amount-part as value and it will overwrite the current corresponding hook state. So no need to first delete the state and then store the new data in it, you can just send an invoke transaction wit the new desired amount and it will overwrite it.
 
+<br>
+
 ## How to delete addresses and/or amounts-parts?
 
 To delete a hook state you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as the value to be deleted (1 invoke transation for each element to delte):
