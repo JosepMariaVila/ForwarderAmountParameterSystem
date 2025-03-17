@@ -178,24 +178,57 @@ Beneficiary 10:
 
 ## How to delete addresses and amounts-parts?
 
-To delete you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 (uint8 format) as value. In case there is any address registered with that identifier, it will delete it.
+To delete you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as value (1 invoke transation for each element to delte):
+To delete Beneficiary 1 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 00.
+1 invoke transaction with parameter: DEL, pointing to position: 01.
 
-DEL and the position we want to delete between 00 to 13 (uint8 format)
+To delete Beneficiary 2 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 02.
+1 invoke transaction with parameter: DEL, pointing to position: 03.
+
+To delete Beneficiary 3 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 04.
+1 invoke transaction with parameter: DEL, pointing to position: 05.
+
+To delete Beneficiary 4 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 06.
+1 invoke transaction with parameter: DEL, pointing to position: 07.
+
+To delete Beneficiary 5 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 08.
+1 invoke transaction with parameter: DEL, pointing to position: 09.
+
+To delete Beneficiary 6 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 0A.
+1 invoke transaction with parameter: DEL, pointing to position: 0B.
+
+To delete Beneficiary 7 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 0C.
+1 invoke transaction with parameter: DEL, pointing to position: 0D.
+
+To delete Beneficiary 8 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 0E.
+1 invoke transaction with parameter: DEL, pointing to position: 0F.
+
+To delete Beneficiary 9 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 10.
+1 invoke transaction with parameter: DEL, pointing to position: 11.
+
+To delete Beneficiary 10 adresss and amount-part:
+1 invoke transaction with parameter: DEL, pointing to position: 12.
+1 invoke transaction with parameter: DEL, pointing to position: 13.
 
 
-Links to follow the tutorial:
+Links:
 
-https://github.com/JosepMariaVila/xahau-forwarder-hook-business-1-boss-20-employees
-
-https://github.com/JosepMariaVila/xahau-forwarder-hook-business-1-boss-20-employees/blob/main/forwarder-hook.c
-
-https://hooks-builder.xrpl.org/develop
+](https://jshooks-builder.xahau.network/develop)
 
 https://hooks.services/tools/raddress-to-accountid
 
 https://transia-rnd.github.io/xrpl-hex-visualizer/
 
-https://xahau-testnet.xrplwin.com/account/rhoPokgLXa8PFVoEaKT76E8n87U58qhatp
+https://xahau-testnet.xrplwin.com/
 
 ## Credit
 
