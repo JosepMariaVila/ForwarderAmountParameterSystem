@@ -271,7 +271,7 @@ You can send an invoke transaction with a different amount-part as value and it 
 
 ## How to delete addresses and/or amounts-parts?
 
-To delete a hook state you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as the value to be deleted (1 invoke transation for each element to delte):
+To delete a hook state you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as the value to be deleted (1 invoke transation for each element to delete):
 
 <br>
 
