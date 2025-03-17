@@ -252,49 +252,72 @@ You can send an invoke transaction with a different amount-part as value and it 
 ## How to delete addresses and/or amounts-parts?
 
 To delete a hook state you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 as the value to be deleted (1 invoke transation for each element to delte):
+
 <br>
+
 **EXAMPLES: Delete states**
+
 <br>
+
 To delete Beneficiary 1 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 00.
 1 invoke transaction with parameter: DEL, pointing to position: 01.
+
 <br>
+
 To delete Beneficiary 2 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 02.
 1 invoke transaction with parameter: DEL, pointing to position: 03.
+
 <br>
+
 To delete Beneficiary 3 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 04.
 1 invoke transaction with parameter: DEL, pointing to position: 05.
+
 <br>
+
 To delete Beneficiary 4 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 06.
 1 invoke transaction with parameter: DEL, pointing to position: 07.
+
 <br>
+
 To delete Beneficiary 5 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 08.
 1 invoke transaction with parameter: DEL, pointing to position: 09.
+
 <br>
+
 To delete Beneficiary 6 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 0A.
 1 invoke transaction with parameter: DEL, pointing to position: 0B.
+
 <br>
+
 To delete Beneficiary 7 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 0C.
 1 invoke transaction with parameter: DEL, pointing to position: 0D.
 <br>
+
 To delete Beneficiary 8 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 0E.
 1 invoke transaction with parameter: DEL, pointing to position: 0F.
+
 <br>
+
 To delete Beneficiary 9 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 10.
 1 invoke transaction with parameter: DEL, pointing to position: 11.
+
 <br>
+
 To delete Beneficiary 10 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 12.
 1 invoke transaction with parameter: DEL, pointing to position: 13.
+
 <br>
+
 ## Hook example on the JS Hooks Xahau network
 
 https://xahau-jshooks-testnet.xrplwin.com/account/rU6Pgd7NhR12uthsVQ7LJFXXicmL2Y6YPE
