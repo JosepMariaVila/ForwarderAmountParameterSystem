@@ -8,7 +8,7 @@ This is a example to demonstrate the use of a working hook in Xahau testnet. The
 
 The hook is installed on an account (salary distributor). Once installed, every time the account receives a payment (from the boss) through a Payment or URITokenBuy transaction type, it will be distributed in the corresponding amounts stored in the namespaces among the accounts stored (employees) also in the namespaces. If there are no accounts in the namespace, it will do nothing.
 
-## How to add addresses?
+## How to add addresses and amounts-parts?
 
 The hook allows up to 10 addresses to which the amounts received can be distributed in the different desired amounts.
 
