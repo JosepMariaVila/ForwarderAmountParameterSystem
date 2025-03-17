@@ -39,6 +39,8 @@ If the amount to send to a beneficiary are 8 parts out of 10, set in the invoke 
 If the amount to send to a beneficiary are 9 parts out of 10, set in the invoke transaction the parameter AMO to 09.
 If the amount to send to a beneficiary are 10 parts out of 10, set in the invoke transaction the parameter AMO to 0A.
 
+(Numbers in Hex from 1 to 10: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.)
+
 Example: 
 On Monday the hook receives 100 XAH and it has set in the parameters the following distribution:
 Account 1: 3 parts. So 30 XAH. The hook has the parameter AMO set to 03 regarding Account 1.
@@ -99,7 +101,7 @@ Account 10: 0 parts. So 0 XAH. The hook has the parameter AMO set to 00 regardin
 |12|address10 translated to AccountID|
 |13|amount10 a number-part from 1 to 10 in hex|
 
-To add an account and the desired amount we must create an Invoke transaction from the hook account and add the following Hook parameters and values:
+To add an account in the hook we must create an Invoke transaction from the hook account and add the following Hook parameters and values:
 
 NU1 with a position we want between 00 to 13 
 ADD with the AccountID
@@ -107,22 +109,74 @@ NU2 with a position we want between 00 to 13
 AMO with the multiplier number we want for that acccount
 
 **Examples:**
+
 Beneficiary 1:
-Invoke transaction with the following parameters:
 - NU1: 00
-- ADD: D53F733E54B866B9FBDB85762071832B03A56C76
+- ADD: D53F733E54B866B9FBDB85762071832B03A56C76 (the desired beneficiary raddres converted to AccountID)
 - NU2: 01
-- AMO: 01 (the desired amount of parts to send)
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
 
-We need to change NU1, ADD, NU2 and AMO to hex. NU1 = 4E5531, ADD = 414444, NU2= 4E5532 and AMO = 414D4F
-Also, we need to translate address account rLSYATPWj9UECGBEeVpxwEN16CuEREK3uR to AccountID D53F733E54B866B9FBDB85762071832B03A56C76
-
+Note that it is needed to convert NU1, ADD, NU2 and AMO to hex. NU1 = 4E5531, ADD = 414444, NU2= 4E5532 and AMO = 414D4F, but using JS Hooks Builder the code does it for you, so no need to convert those to hex if you use JS Hook Builder. In the terminal it will look like this:
 - 4E5531: 00
 - 414444: D53F733E54B866B9FBDB85762071832B03A56C76
 - 4E5532: 01
-- 414D4F: 01 (?)
+- 414D4F: 01
 
-## How to delete addresses?
+Beneficiary 2:
+- NU1: 02
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 03
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 3:
+- NU1: 04
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 05
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 4:
+- NU1: 06
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 07
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 5:
+- NU1: 08
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 09
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 6:
+- NU1: 0A
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 0B
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 7:
+- NU1: 0C
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 0D
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 8:
+- NU1: 0E
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 0F
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 9:
+- NU1: 10
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 11
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+Beneficiary 10:
+- NU1: 12
+- ADD: (the desired beneficiary raddres converted to AccountID)
+- NU2: 13
+- AMO: 01 (the desired amount of parts to send, in this case 1 part out of 10)
+
+## How to delete addresses and amounts-parts?
 
 To delete you have to create an Invoke transaction from the hook account and use as parameter DEL and the position between 00 to 13 (uint8 format) as value. In case there is any address registered with that identifier, it will delete it.
 
