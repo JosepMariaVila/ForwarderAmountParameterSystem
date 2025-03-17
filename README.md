@@ -12,15 +12,9 @@ The hook is installed on an account (salary distributor). Once installed, every 
 
 This hook or other installed hooks could change the expected result. So it is important to pre-test this and other hooks on Testnet before using it on Mainnet.
 
-## How to install the Forwarder Hook on Testnet?
-
-Follow the step by step tutorial I created to install this hook using the Xahau Hooks Builder: 
-
-https://youtu.be/JF_xMS-4WCE
-
 ## How to add addresses?
 
-The hook allows up to 10 addresses to which the amounts received can be distributed in desired different amounts.
+The hook allows up to 10 addresses to which the amounts received can be distributed in the different desired amounts.
 
 The addresses must be converted to Account ID. To do this you can use the following tool:
 
@@ -218,7 +212,6 @@ To delete Beneficiary 9 adresss and amount-part:
 To delete Beneficiary 10 adresss and amount-part:
 1 invoke transaction with parameter: DEL, pointing to position: 12.
 1 invoke transaction with parameter: DEL, pointing to position: 13.
-
 
 Links:
 
