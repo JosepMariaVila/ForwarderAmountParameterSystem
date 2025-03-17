@@ -16,7 +16,11 @@ The addresses must be converted to Account ID. To do this you can use the follow
 
 - https://hooks.services/tools/raddress-to-accountid
 
-The total amount the hook receives is divided by 10, so we have 10 parts which can be distributed as desired to the 10 different beneficiary accounts. You can modifiy the amount of parts sent to each beneficiary modifiying the hook parameters performing an invoke transaction as follows: 
+The total amount the hook receives is divided by 10, so we have 10 parts which can be distributed as desired to the 10 different beneficiary accounts. 
+
+Numbers corresponding to the desired number of parts have to be in Hex format as follows, from 1 to 10: 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
+
+You can modifiy the amount of parts sent to each beneficiary modifiying the hook parameter AMO performing an invoke transaction wit the desired number-parts: 
 
 If the amount to send to a beneficiary is 1 part out of 10, set in the invoke transaction the parameter AMO to 01.
 
