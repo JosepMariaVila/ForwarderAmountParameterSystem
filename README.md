@@ -368,7 +368,9 @@ https://xahau-jshooks-testnet.xrplwin.com/account/rU6Pgd7NhR12uthsVQ7LJFXXicmL2Y
 
 https://jshooks-builder.xahau.network/develop
 
-https://hooks.services/tools/raddress-to-accountid
+raddress to AccountID: https://hooks.services/tools/raddress-to-accountid
+
+ASCII to HEX: https://hooks.services/tools/ascii-to-hex
 
 https://transia-rnd.github.io/xrpl-hex-visualizer/
 
