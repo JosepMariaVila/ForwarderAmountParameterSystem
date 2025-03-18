@@ -378,4 +378,6 @@ JSHooks testnet explorer: https://xahau-jshooks-testnet.xrplwin.com/
 
 ## Credit
 
-This hook was originally created by @[ekiserrepe](https://x.com/ekiserrepe). You can find more of his projects on [ekiserrepe.com](https://www.ekiserrepe.com)
+This hook was originally created by @[ekiserrepe](https://x.com/ekiserrepe): https://github.com/Ekiserrepe/forwarder-hook/blob/main/forwarder-hook.ts
+
+You can find more of his projects on [ekiserrepe.com](https://www.ekiserrepe.com)
