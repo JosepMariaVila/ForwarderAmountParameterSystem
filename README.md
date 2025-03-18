@@ -15,7 +15,7 @@ The hook is installed on an account (salary distributor). Once installed, every 
 
 <br>
 
-## How to add addresses and amounts-parts?
+## How to add addresses and amounts-parts to the hook state?
 
 The hook allows up to 10 addresses to which the amounts received can be distributed in the different desired amounts-parts.
 
@@ -169,7 +169,7 @@ Value: the desired amount-part this account has to receive, it can be any of the
 
 <br>
 
-**EXAMPLES: Store addresses and amounts in hook state using parameters**
+**EXAMPLES: Store addresses and amounts to the hook state using parameters**
 
 <br>
 
