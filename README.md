@@ -27,7 +27,7 @@ The total amount the hook receives is divided by 10, so we have 10 parts each on
 
 Numbers corresponding to the desired number of parts have to be in Hex format as follows, from 0 to 10 (it can be 0 if we don't want to send any amount to certain account): 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
-You can modifiy the amount of parts sent to each beneficiary modifiying the hook parameter AMO performing an invoke transaction wit the desired number-parts: 
+You can modifiy the amount of parts sent to each beneficiary modifiying the hook parameter AMO performing an invoke transaction with the new desired number-parts: 
 
 If the amount to send to a beneficiary is 0 parts out of 10, set in the invoke transaction the parameter AMO to 00.
 
