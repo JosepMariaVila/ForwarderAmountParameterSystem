@@ -3,7 +3,7 @@
 <br>
 
 ## Forwarder Hook Amount Parameter System
-This is a example to demonstrate the use of a working hook in Xahau testnet. The hook is programmed in javascript. It is recommended for educational purposes only. The creator is not responsible for any problems it may cause.
+This is an example to demonstrate the use of a working hook in Xahau JS Hooks testnet. The hook is programmed in javascript. It is recommended for educational purposes only. The creator is not responsible for any problems it may cause.
 
 **Please use new accounts to test this hook and test everything beforehand on Testnet. I am not responsible for any losses. Create your own code if you are not sure.**
 
@@ -23,7 +23,7 @@ Addresses must be converted to Account ID. To do this you can use the following 
 
 - https://hooks.services/tools/raddress-to-accountid
 
-The total amount the hook receives is divided by 10, so we have 10 parts which can be distributed as set in the AMO parameter to the 10 different beneficiary accounts. 
+The total amount the hook receives is divided by 10, so we have 10 parts each one corresponding to the 10% of the total amount received. Those parts can be distributed as set in the AMO parameters to the 10 different beneficiary accounts. For example a beneficiary can receive 50% of the total amount (5 parts, parameter set at 5), another beneficiary 30% (3 parts, parameter set at 3), another one 20% (2 parts, parameter set at 2) an the rest of beneficiaries 0% (parameters set at 0). 
 
 Numbers corresponding to the desired number of parts have to be in Hex format as follows, from 0 to 10 (it can be 0 if we don't want to send any amount to certain account): 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
