@@ -23,7 +23,7 @@ Addresses must be converted to Account ID. To do this you can use the following 
 
 - https://hooks.services/tools/raddress-to-accountid
 
-The total amount the hook receives is divided by 10, so we have 10 parts each one corresponding to the 10% of the total amount received. Those parts can be distributed as set in the AMO parameters to the 10 different beneficiary accounts. For example a beneficiary can receive 50% of the total amount (5 parts, parameter set at 5), another beneficiary 30% (3 parts, parameter set at 3), another one 20% (2 parts, parameter set at 2) an the rest of beneficiaries 0% (parameters set at 0). 
+The total amount the hook receives is divided by 10, so we have 10 parts each one corresponding to the 10% of the total amount received. Those parts can be distributed as set in the AMO parameters to the 10 different beneficiary accounts. For example a beneficiary can receive 50% of the total amount (5 parts, its AMO parameter set at 05), another beneficiary 30% (3 parts, its AMO parameter set at 03), another one 20% (2 parts, AMO parameter set at 02) an the rest of beneficiaries 0% (AMO parameters set at 00). 
 
 Numbers corresponding to the desired number of parts have to be in Hex format as follows, from 0 to 10 (it can be 0 if we don't want to send any amount to certain account): 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A.
 
