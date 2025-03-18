@@ -19,7 +19,7 @@ The hook is installed on an account (salary distributor). Once installed, every 
 
 The hook allows up to 10 addresses to which the amounts received can be distributed in the different desired amounts-parts.
 
-Addresses must be converted to Account ID. To do this you can use the following tool:
+Addresses must be converted to Account ID and added to the ADD parameter. To do this you can use the following tool:
 
 - https://hooks.services/tools/raddress-to-accountid
 
