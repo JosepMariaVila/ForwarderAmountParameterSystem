@@ -1,8 +1,8 @@
 
 /*
  * This hook resend the desired amount from a payment received or a URI buy to the destinations saved in the namespace of the hooks account.
- * The hook accepts 10 destinations and it can distribute 10 parts to the desired accounts.
- * You can add destinations to the namespaces
+ * The hook accepts 10 destinations and it can distribute 10 parts to the desired accounts, each part is the 10% of the total amount receives.
+ * You can forward any combination which results in a total amount of 100%, these combined can be used: 10% = 01, 20% = 02, 30% = 03, 40% = 04, 50% = 05, 60% = 06, 70% = 07, 80% = 08, 90% = 09 or 100% = 0A.
  * Hook Parameters to Add destinations and Amounts-parts using Invoke:
  * NU1: The number to identify the address and be able to delete it (from 00 to 13)
  * ADD: Xahau Address transformed  from rAddress To Account ID. You can use https://hooks.services/tools/raddress-to-accountid or https://transia-rnd.github.io/xrpl-hex-visualizer/ . To check if you are doing it right, address: rBnGX5KRERL2vMtZU2hDpF4osbhvichmvn will be translated to 6E7FE2948037180F3646CC248FAF2BCACD59893C
