@@ -169,7 +169,7 @@ Value: the desired amount-part this account has to receive, it can be any of the
 
 <br>
 
-**EXAMPLES: Store addresses and amounts in state by parameters**
+**EXAMPLES: Store addresses and amounts in hook state using parameters**
 
 <br>
 
@@ -263,7 +263,7 @@ Have in mind that the total amount of parts of all accounts combined always has 
 
 <br>
 
-## How to modify amounts-parts?
+## How to modify the hook state amounts-parts?
 
 You can send an invoke transaction with a different amount-part as value and it will overwrite the current corresponding hook state. So no need to first delete the state and then store the new data in it, you can just send an invoke transaction wit the new desired amount and it will overwrite it.
 
