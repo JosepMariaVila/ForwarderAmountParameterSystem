@@ -59,7 +59,7 @@ If the amount to send to a beneficiary are 10 parts out of 10, set in the invoke
 
 **On Monday the hook receives 100 XAH and it has set in the parameters the following distribution:**
 
-Account 1: 3 parts. So 30 XAH. The hook has the parameter AMO set to 03 regarding Acc]ount 1.
+Account 1: 3 parts. So 30 XAH. The hook has the parameter AMO set to 03 regarding Account 1.
 
 Account 2: 2 parts. So 20 XAH. The hook has the parameter AMO set to 02 regarding Account 2.
 
