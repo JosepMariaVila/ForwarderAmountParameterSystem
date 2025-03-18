@@ -332,6 +332,7 @@ To delete Beneficiary 7 adresss and amount-part:
 To delete the address: 1 invoke transaction with parameter: DEL, pointing to position: 0C.
 
 To delete the amount-part: 1 invoke transaction with parameter: DEL, pointing to position: 0D.
+
 <br>
 
 To delete Beneficiary 8 adresss and amount-part:
